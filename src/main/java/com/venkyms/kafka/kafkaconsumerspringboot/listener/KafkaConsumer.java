@@ -10,6 +10,9 @@ public class KafkaConsumer {
     @KafkaListener(topics = "simpleKafkaProducer")
     public void consume(String message) {
         System.out.println("ConsumedMessage:"+ message);
+
+        //TODO  - call external service
+
     }
 
     @KafkaListener(topics = "simpleKafkaProducer_json", groupId = "group_json", containerFactory = "messageListenerContainerFactory")
